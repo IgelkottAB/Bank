@@ -1,5 +1,5 @@
 
 window.BANK_CONFIG = {
-  SUPABASE_URL: "DIN_SUPABASE_PROJECT_URL",
-  SUPABASE_PUBLISHABLE_KEY: "DIN_SUPABASE_PUBLISHABLE_KEY"
+  SUPABASE_URL: "https://fwmxjxblrkilggqzksrr.supabase.co",
+  SUPABASE_PUBLISHABLE_KEY: "sb_publishable_tMCYMJmweiZFVH4dkrxALg_-W6JB9gA"
 };
