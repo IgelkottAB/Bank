@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="bank.js" defer></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">🦔 Igelkotts Bank</a>
+  <a class="back" href="index.html">← Startsidan</a>
+</header>
+
+<main class="container">
+  <h1>Personalportal</h1>
+  <section class="panel">
+    <h2>Testinloggning</h2>
+    <p>Använd testkoden nedan för att prova sidan.</p>
+    <form id="staff-login">
+      <label>Sexsiffrig testkod</label>
+      <input name="code" type="password" inputmode="numeric" maxlength="6" required>
+      <button>Logga in</button>
+      <p id="staff-message" class="message" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="panel" id="staff-tools" hidden>
+    <h2>Personalverktyg</h2>
+    <div class="accounts">
+      <div class="account">
+        <strong>🏧 Bankomater</strong>
+        <p>Inventering av sedlar kommer senare.</p>
+      </div>
+      <div class="account">
+        <strong>👥 Kunder</strong>
+        <p>Kundhantering kommer senare.</p>
+      </div>
+      <div class="account">
+        <strong>📋 Händelselogg</strong>
+        <p>Personalens åtgärder kommer senare.</p>
+      </div>
+    </div>
+    <button class="secondary" id="reset-demo" type="button">Återställ testdata</button>
+  </section>
+
+  <p class="warning">
+    Testkoden är 123456 och är inte säker. I den färdiga versionen ska
+    personalinloggningen kontrolleras av servern.
+  </p>
+</main>
+<footer>Igelkotts Bank · Testversion</footer>
+</body>
+</html>

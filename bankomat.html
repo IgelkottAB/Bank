@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bankomat</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="bank.js" defer></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">🦔 Igelkotts Bank</a>
+  <a class="back" href="kund.html">← Kundbanken</a>
+</header>
+
+<main class="container">
+  <h1>🏧 Bankomat</h1>
+  <p class="muted">Testa insättning och uttag från bankomatkontot.</p>
+
+  <section class="balance">
+    Bankomatkontots saldo
+    <strong id="atm-balance">200,00 kr</strong>
+  </section>
+
+  <section class="panel">
+    <h2>Genomför testtransaktion</h2>
+    <form id="atm-form">
+      <label>Transaktion</label>
+      <select name="kind">
+        <option value="insättning">Sätt in pengar</option>
+        <option value="uttag">Ta ut pengar</option>
+      </select>
+      <label>Belopp i kronor</label>
+      <input name="amount" type="number" min="1" step="1" required>
+      <label>Bankomatens kod</label>
+      <input name="atmcode" required placeholder="ATM-001">
+      <button>Genomför test</button>
+      <p id="atm-message" class="message" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Bankomathistorik</h2>
+    <div id="atm-history"></div>
+  </section>
+
+  <p class="warning">
+    Detta ändrar bara exempelsaldot. Fysisk sedelräkning, QR-kod och
+    säker kundinloggning är inte byggda ännu.
+  </p>
+</main>
+<footer>Igelkotts Bank · Testversion</footer>
+</body>
+</html>

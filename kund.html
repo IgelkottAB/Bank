@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kundbanken</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="bank.js" defer></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">🦔 Igelkotts Bank</a>
+  <a class="back" href="index.html">← Startsidan</a>
+</header>
+
+<main class="container">
+  <h1>Kundbanken</h1>
+  <p class="muted">Demokund · Exempelsaldon</p>
+
+  <section class="balance">
+    Totalt på dina konton
+    <strong id="total-balance">0 kr</strong>
+  </section>
+
+  <h2>Dina konton</h2>
+  <section id="accounts" class="accounts"></section>
+
+  <section class="panel">
+    <h2>Överför mellan egna konton</h2>
+    <form id="transfer-form">
+      <label>Från konto</label>
+      <select name="source"></select>
+      <label>Till konto</label>
+      <select name="destination"></select>
+      <label>Belopp i kronor</label>
+      <input name="amount" type="number" min="0.01" step="0.01" required>
+      <button>Överför pengar</button>
+      <p id="transfer-message" class="message" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Sparmål</h2>
+    <form id="goal-form">
+      <label>Namn på sparmålet</label>
+      <input name="name" required placeholder="Till exempel ny cykel">
+      <label>Målbelopp i kronor</label>
+      <input name="target" type="number" min="1" required>
+      <label>Välj konto</label>
+      <select name="source" required>
+        <option value="">-VÄLJ KONTO-</option>
+        <option value="card">Kortkonto</option>
+        <option value="savings">Sparkonto</option>
+      </select>
+      <button>SPARA MÅL</button>
+      <p id="goal-message" class="message" aria-live="polite"></p>
+    </form>
+    <div id="goals-list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Testköp och digitala kvitton</h2>
+    <form id="receipt-form">
+      <label>Butik</label>
+      <input name="store" required>
+      <label>Varor och priser</label>
+      <textarea name="items" required placeholder="Bröd 20 kr, mjölk 15 kr"></textarea>
+      <label>Totalsumma i kronor</label>
+      <input name="total" type="number" min="0.01" step="0.01" required>
+      <label>Betala från</label>
+      <select name="account"></select>
+      <button>Registrera testköp</button>
+      <p id="receipt-message" class="message" aria-live="polite"></p>
+    </form>
+    <h3>Sparade kvitton</h3>
+    <div id="receipts-list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Senaste transaktioner</h2>
+    <div id="transactions"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Notiser</h2>
+    <div id="notices-list"></div>
+  </section>
+
+  <p class="warning">Detta är en lokal testversion. Dina uppgifter synkas inte mellan datorer.</p>
+  <p><a class="back" href="bankomat.html">🏧 Öppna bankomaten</a></p>
+  <p><a class="back" href="service.html">💬 Kundservice</a></p>
+</main>
+<footer>Igelkotts Bank · Testversion</footer>
+</body>
+</html>
