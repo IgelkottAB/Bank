@@ -1,1 +1,1 @@
-window.BANK_CONFIG={url:'https://fwmxjxblrkilggqzksrr.supabase.co',anonKey:'sb_publishable_tMCYMJmweiZFVH4dkrxALg_-W6JB9gA'};
+window.BANK_CONFIG={url:'FYLL_I_SUPABASE_PROJECT_URL',anonKey:'FYLL_I_SUPABASE_PUBLISHABLE_KEY'};
